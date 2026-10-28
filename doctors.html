@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="en" class="no-js">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Find a Doctor | CareWell Hospital</title>
+  <meta name="description" content="Search and filter fictional CareWell Hospital doctors by specialty, expertise and language. See sample profiles, availability and book a demo appointment.">
+  <meta name="theme-color" content="#083A56">
+  <link rel="icon" href="assets/images/brand/favicon.svg" type="image/svg+xml">
+  <link rel="preload" href="assets/fonts/manrope-latin.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="preload" href="assets/fonts/fraunces-latin.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="stylesheet" href="assets/css/custom.css">
+  <meta property="og:type" content="website">
+  <meta property="og:site_name" content="CareWell Hospital">
+  <meta property="og:title" content="Find a Doctor | CareWell Hospital">
+  <meta property="og:description" content="Search fictional clinician profiles by specialty, expertise and language.">
+  <meta property="og:image" content="assets/images/brand/og-carewell.jpg">
+  <meta name="twitter:card" content="summary_large_image">
+  <script>document.documentElement.classList.remove('no-js');document.documentElement.classList.add('js');</script>
+  <script src="assets/js/lucide.min.js" defer></script>
+  <script src="assets/js/components.js" defer></script>
+  <script src="assets/js/navigation.js" defer></script>
+  <script src="assets/js/main.js" defer></script>
+  <script src="assets/js/doctors.js" defer></script>
+</head>
+<body id="top">
+  <a class="skip-link" href="#main">Skip to content</a>
+  <div id="emergency-bar" class="min-h-[36px]"></div>
+  <div id="site-header" class="min-h-[74px]"></div>
+
+  <main id="main">
+    <section class="page-hero">
+      <div class="hero-pattern" aria-hidden="true"></div>
+      <div class="container-site">
+        <div class="page-hero-inner">
+          <nav aria-label="Breadcrumb">
+            <ol class="breadcrumb">
+              <li><a href="index.html">Home</a></li>
+              <li><a href="doctors.html">Doctors</a></li>
+              <li><span aria-current="page">Find a doctor</span></li>
+            </ol>
+          </nav>
+          <div class="mt-8 grid gap-10 lg:mt-10 lg:grid-cols-12 lg:items-end lg:gap-14">
+            <div class="lg:col-span-8">
+              <span class="eyebrow">Our doctors</span>
+              <h1 class="display-1 mt-5">Choose the person, not just the specialty.</h1>
+              <p class="lead mt-6 max-w-2xl">Search fictional clinician profiles by name, specialty, expertise or language. Read how they work, see sample availability, and request a demo appointment with the person who feels right for you.</p>
+            </div>
+            <div class="lg:col-span-4">
+              <div class="rounded-card border border-line bg-white p-6 shadow-soft">
+                <p class="eyebrow-plain">Good to know</p>
+                <ul class="mt-4 space-y-3 text-sm text-ink-soft">
+                  <li class="flex items-start gap-2.5"><i data-lucide="check" class="mt-0.5 h-4 w-4 shrink-0 text-teal-600" aria-hidden="true"></i><span>10 sample profiles across 10 specialties</span></li>
+                  <li class="flex items-start gap-2.5"><i data-lucide="check" class="mt-0.5 h-4 w-4 shrink-0 text-teal-600" aria-hidden="true"></i><span>Sample schedules and languages listed</span></li>
+                  <li class="flex items-start gap-2.5"><i data-lucide="check" class="mt-0.5 h-4 w-4 shrink-0 text-teal-600" aria-hidden="true"></i><span>Requests are demo-only and not stored</span></li>
+                </ul>
+                <a class="text-link mt-5" href="appointment.html">Request an appointment <i data-lucide="arrow-right" class="h-4 w-4" aria-hidden="true"></i></a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section-sm" aria-labelledby="directory-title">
+      <div class="container-site">
+        <div class="flex flex-col gap-6 lg:flex-row lg:items-end lg:justify-between">
+          <div>
+            <span class="eyebrow">Doctor directory</span>
+            <h2 class="section-title mt-4" id="directory-title">Find the right clinician.</h2>
+          </div>
+          <div class="w-full lg:max-w-sm">
+            <label class="field-label" for="doctor-search">Search by name, specialty or focus</label>
+            <div class="relative mt-2">
+              <i data-lucide="search" class="pointer-events-none absolute left-3.5 top-1/2 h-4 w-4 -translate-y-1/2 text-ink-faint" aria-hidden="true"></i>
+              <input class="field-input pl-10" id="doctor-search" type="search" placeholder="Try &quot;heart&quot;, &quot;Dr. Kim&quot; or &quot;Spanish&quot;" autocomplete="off">
+            </div>
+          </div>
+        </div>
+
+        <div class="mt-7 flex gap-1.5 overflow-x-auto pb-2 no-scrollbar" id="doctor-filters" role="group" aria-label="Filter doctors by specialty"></div>
+
+        <div class="mt-5 flex flex-col gap-3 border-y border-line py-3 sm:flex-row sm:items-center sm:justify-between">
+          <p class="text-xs font-bold uppercase tracking-[0.14em] text-ink-faint" id="doctor-count" aria-live="polite">Loading doctors…</p>
+          <button class="text-xs font-bold text-teal-700 hover:text-teal-600" type="button" data-doctor-clear>Reset search and filters</button>
+        </div>
+
+        <div class="mt-8 grid gap-5 sm:grid-cols-2 lg:grid-cols-3" id="doctor-grid" aria-live="polite">
+          <p class="col-span-full rounded-card border border-line bg-sand-50 p-6 text-sm text-ink-soft">Loading the doctor directory…</p>
+        </div>
+
+        <noscript>
+          <div class="mt-6 rounded-card border border-alert/25 bg-alert/5 p-5 text-sm text-ink-soft">
+            <p class="font-bold text-navy-900">JavaScript is required for the interactive doctor directory.</p>
+            <p class="mt-2">You can still <a class="font-bold underline underline-offset-2" href="specialties.html">browse specialties</a> or <a class="font-bold underline underline-offset-2" href="contact.html">contact reception</a> for help finding a clinician.</p>
+          </div>
+        </noscript>
+
+        <div class="mt-8 rounded-card border border-line bg-sand-50 p-8 text-center" id="doctor-empty" hidden>
+          <span class="mx-auto flex h-12 w-12 items-center justify-center rounded-full bg-white text-ink-faint">
+            <i data-lucide="user-search" class="h-6 w-6" aria-hidden="true"></i>
+          </span>
+          <h3 class="display-3 mt-4">No doctors match <span id="doctor-empty-query"></span></h3>
+          <p class="mx-auto mt-2 max-w-md text-sm leading-relaxed text-ink-soft">Try a broader term, choose a different specialty, or ask our fictional reception team to help you find the right clinician.</p>
+          <div class="mt-5 flex flex-col justify-center gap-3 sm:flex-row">
+            <button class="btn btn-secondary" type="button" data-doctor-clear>Clear filters</button>
+            <a class="btn btn-primary" href="contact.html">Contact reception</a>
+          </div>
+        </div>
+
+        <p class="note mt-6">All doctors, portraits, credentials and availability are fictional sample content for this demonstration.</p>
+      </div>
+    </section>
+
+    <section class="section bg-sand-50">
+      <div class="container-site">
+        <div class="max-w-2xl">
+          <span class="eyebrow">Choosing well</span>
+          <h2 class="section-title mt-4">A few things worth considering.</h2>
+          <p class="section-copy">Clinical expertise matters. So does the relationship. These questions can help you decide who to see.</p>
+        </div>
+        <div class="mt-9 grid gap-5 md:grid-cols-3">
+          <div class="card card-pad">
+            <span class="font-display text-2xl font-semibold text-teal-600">01</span>
+            <h3 class="display-4 mt-3">What care do you need?</h3>
+            <p class="mt-2 text-sm leading-relaxed text-ink-soft">Start with the specialty or service. If you are unsure, general medicine or our reception team can help you choose.</p>
+          </div>
+          <div class="card card-pad">
+            <span class="font-display text-2xl font-semibold text-teal-600">02</span>
+            <h3 class="display-4 mt-3">How do they communicate?</h3>
+            <p class="mt-2 text-sm leading-relaxed text-ink-soft">Profiles describe each clinician's approach. Consider languages spoken and whether you would like a family member involved.</p>
+          </div>
+          <div class="card card-pad">
+            <span class="font-display text-2xl font-semibold text-teal-600">03</span>
+            <h3 class="display-4 mt-3">What happens next?</h3>
+            <p class="mt-2 text-sm leading-relaxed text-ink-soft">In a real service, the clinic would confirm your appointment and explain any preparation. Here, you will see a demo summary only.</p>
+          </div>
+        </div>
+        <div class="mt-8 flex flex-col gap-4 rounded-card border border-line bg-white p-6 sm:flex-row sm:items-center sm:justify-between">
+          <p class="text-sm leading-relaxed text-ink-soft"><strong class="text-navy-900">Prefer to talk it through?</strong> Our fictional reception team can suggest a specialty or clinician.</p>
+          <a class="btn btn-secondary shrink-0" href="contact.html">Contact reception</a>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <div id="site-footer"></div>
+</body>
+</html>

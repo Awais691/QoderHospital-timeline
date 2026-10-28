@@ -1,0 +1,390 @@
+<!DOCTYPE html>
+<html lang="en" class="no-js">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Services &amp; Treatments | CareWell Hospital</title>
+  <meta name="description" content="Search and filter the clinical services at CareWell Hospital, a fictional hospital demonstration — emergency care, outpatient clinics, surgery, diagnostics, family care and rehabilitation.">
+  <meta name="theme-color" content="#083A56">
+  <link rel="icon" href="assets/images/brand/favicon.svg" type="image/svg+xml">
+  <link rel="preload" href="assets/fonts/manrope-latin.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="preload" href="assets/fonts/fraunces-latin.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="stylesheet" href="assets/css/custom.css">
+  <meta property="og:type" content="website">
+  <meta property="og:site_name" content="CareWell Hospital">
+  <meta property="og:title" content="Services &amp; Treatments | CareWell Hospital">
+  <meta property="og:description" content="Everyday care and specialist treatment, searchable by service or category.">
+  <meta property="og:image" content="assets/images/brand/og-carewell.jpg">
+  <meta name="twitter:card" content="summary_large_image">
+  <script>document.documentElement.classList.remove('no-js');document.documentElement.classList.add('js');</script>
+  <script src="assets/js/lucide.min.js" defer></script>
+  <script src="assets/js/components.js" defer></script>
+  <script src="assets/js/navigation.js" defer></script>
+  <script src="assets/js/main.js" defer></script>
+</head>
+<body id="top">
+  <a class="skip-link" href="#main">Skip to content</a>
+  <div id="emergency-bar" class="min-h-[36px]"></div>
+  <div id="site-header" class="min-h-[74px]"></div>
+
+  <main id="main">
+    <section class="page-hero">
+      <div class="hero-pattern" aria-hidden="true"></div>
+      <div class="container-site">
+        <div class="page-hero-inner">
+          <nav aria-label="Breadcrumb">
+            <ol class="breadcrumb">
+              <li><a href="index.html">Home</a></li>
+              <li><span aria-current="page">Services</span></li>
+            </ol>
+          </nav>
+          <div class="mt-8 grid gap-10 lg:mt-10 lg:grid-cols-12 lg:items-end lg:gap-14">
+            <div class="lg:col-span-8">
+              <span class="eyebrow">Services &amp; treatments</span>
+              <h1 class="display-1 mt-5">The care you need, made easier to find.</h1>
+              <p class="lead mt-6 max-w-2xl">From a routine check-up to complex surgical care, explore the services available at our fictional hospital. Search by name or filter by the type of care you are looking for.</p>
+            </div>
+            <div class="lg:col-span-4">
+              <div class="rounded-card border border-line bg-white p-6 shadow-soft">
+                <p class="flex items-center gap-2 text-sm font-bold text-navy-900"><i data-lucide="phone-call" class="h-4 w-4 text-alert" aria-hidden="true"></i> Need urgent help?</p>
+                <p class="mt-2 text-sm leading-relaxed text-ink-soft">Our emergency department is open 24/7. For a life-threatening emergency, call 911.</p>
+                <a class="btn btn-emergency btn-sm mt-4 w-full" href="tel:+15550149111">Call (555) 014-9111</a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section-sm" aria-labelledby="directory-title">
+      <div class="container-site">
+        <div class="flex flex-col gap-6 lg:flex-row lg:items-end lg:justify-between">
+          <div>
+            <span class="eyebrow">Service directory</span>
+            <h2 class="section-title mt-4" id="directory-title">Find the right service.</h2>
+          </div>
+          <div class="w-full lg:max-w-sm">
+            <label class="field-label" for="service-search">Search services</label>
+            <div class="relative mt-2">
+              <i data-lucide="search" class="pointer-events-none absolute left-3.5 top-1/2 h-4 w-4 -translate-y-1/2 text-ink-faint" aria-hidden="true"></i>
+              <input class="field-input pl-10" id="service-search" type="search" placeholder="Try &quot;imaging&quot; or &quot;maternity&quot;" autocomplete="off">
+            </div>
+          </div>
+        </div>
+
+        <div class="mt-7 flex gap-2 overflow-x-auto pb-2 no-scrollbar" role="group" aria-label="Filter services by category">
+          <button class="chip is-active shrink-0" type="button" data-service-filter="all" aria-pressed="true">All services</button>
+          <button class="chip shrink-0" type="button" data-service-filter="emergency" aria-pressed="false">Emergency</button>
+          <button class="chip shrink-0" type="button" data-service-filter="outpatient" aria-pressed="false">Outpatient clinics</button>
+          <button class="chip shrink-0" type="button" data-service-filter="surgical" aria-pressed="false">Surgery</button>
+          <button class="chip shrink-0" type="button" data-service-filter="diagnostics" aria-pressed="false">Diagnostics</button>
+          <button class="chip shrink-0" type="button" data-service-filter="family" aria-pressed="false">Family &amp; maternity</button>
+          <button class="chip shrink-0" type="button" data-service-filter="therapy" aria-pressed="false">Therapy &amp; rehab</button>
+        </div>
+
+        <div class="mt-5 flex flex-col gap-3 border-y border-line py-3 sm:flex-row sm:items-center sm:justify-between">
+          <p class="text-xs font-bold uppercase tracking-[0.14em] text-ink-faint" id="service-count" aria-live="polite">18 services</p>
+          <p class="text-xs text-ink-faint">Filtering happens instantly in your browser. Nothing is sent anywhere.</p>
+        </div>
+
+        <div class="mt-8" data-service-directory>
+          <div class="grid gap-5 sm:grid-cols-2 lg:grid-cols-3">
+            <!-- Emergency -->
+            <article class="card card-pad card-hover flex flex-col" data-service-card data-category="emergency">
+              <div class="flex items-start justify-between gap-3">
+                <span class="flex h-11 w-11 items-center justify-center rounded-xl bg-alert/10 text-alert"><i data-lucide="ambulance" class="h-5 w-5" aria-hidden="true"></i></span>
+                <span class="badge badge-sand">Emergency</span>
+              </div>
+              <h3 class="display-4 mt-4">Emergency assessment</h3>
+              <p class="mt-2 flex-1 text-sm leading-relaxed text-ink-soft">24/7 assessment for serious injury and sudden illness, with on-site imaging, laboratory and critical care support.</p>
+              <a class="text-link mt-5" href="#emergency">Emergency information <i data-lucide="arrow-right" class="h-4 w-4" aria-hidden="true"></i></a>
+            </article>
+
+            <article class="card card-pad card-hover flex flex-col" data-service-card data-category="emergency">
+              <div class="flex items-start justify-between gap-3">
+                <span class="flex h-11 w-11 items-center justify-center rounded-xl bg-alert/10 text-alert"><i data-lucide="clock-3" class="h-5 w-5" aria-hidden="true"></i></span>
+                <span class="badge badge-sand">Emergency</span>
+              </div>
+              <h3 class="display-4 mt-4">Urgent care</h3>
+              <p class="mt-2 flex-1 text-sm leading-relaxed text-ink-soft">Walk-in care for concerns that need attention today but are not life-threatening, such as minor infections or sprains.</p>
+              <a class="text-link mt-5" href="contact.html">Contact urgent care <i data-lucide="arrow-right" class="h-4 w-4" aria-hidden="true"></i></a>
+            </article>
+
+            <!-- Outpatient -->
+            <article class="card card-pad card-hover flex flex-col" data-service-card data-category="outpatient">
+              <div class="flex items-start justify-between gap-3">
+                <span class="flex h-11 w-11 items-center justify-center rounded-xl bg-teal-50 text-teal-700"><i data-lucide="stethoscope" class="h-5 w-5" aria-hidden="true"></i></span>
+                <span class="badge badge-sand">Outpatient</span>
+              </div>
+              <h3 class="display-4 mt-4">General medicine clinic</h3>
+              <p class="mt-2 flex-1 text-sm leading-relaxed text-ink-soft">Assessment for complex or overlapping symptoms, long-term conditions and coordination between specialists.</p>
+              <a class="text-link mt-5" href="appointment.html?specialty=general-medicine">Request an appointment <i data-lucide="arrow-right" class="h-4 w-4" aria-hidden="true"></i></a>
+            </article>
+
+            <article class="card card-pad card-hover flex flex-col" data-service-card data-category="outpatient">
+              <div class="flex items-start justify-between gap-3">
+                <span class="flex h-11 w-11 items-center justify-center rounded-xl bg-teal-50 text-teal-700"><i data-lucide="heart-pulse" class="h-5 w-5" aria-hidden="true"></i></span>
+                <span class="badge badge-sand">Outpatient</span>
+              </div>
+              <h3 class="display-4 mt-4">Cardiology clinic</h3>
+              <p class="mt-2 flex-1 text-sm leading-relaxed text-ink-soft">Heart health assessment, prevention planning and long-term management of coronary disease and heart failure.</p>
+              <a class="text-link mt-5" href="appointment.html?specialty=cardiology">Request an appointment <i data-lucide="arrow-right" class="h-4 w-4" aria-hidden="true"></i></a>
+            </article>
+
+            <article class="card card-pad card-hover flex flex-col" data-service-card data-category="outpatient">
+              <div class="flex items-start justify-between gap-3">
+                <span class="flex h-11 w-11 items-center justify-center rounded-xl bg-teal-50 text-teal-700"><i data-lucide="brain" class="h-5 w-5" aria-hidden="true"></i></span>
+                <span class="badge badge-sand">Outpatient</span>
+              </div>
+              <h3 class="display-4 mt-4">Neurology clinic</h3>
+              <p class="mt-2 flex-1 text-sm leading-relaxed text-ink-soft">Assessment for headache, epilepsy, movement concerns, stroke recovery and changes in memory or cognition.</p>
+              <a class="text-link mt-5" href="appointment.html?specialty=neurology">Request an appointment <i data-lucide="arrow-right" class="h-4 w-4" aria-hidden="true"></i></a>
+            </article>
+
+            <article class="card card-pad card-hover flex flex-col" data-service-card data-category="outpatient">
+              <div class="flex items-start justify-between gap-3">
+                <span class="flex h-11 w-11 items-center justify-center rounded-xl bg-teal-50 text-teal-700"><i data-lucide="sparkles" class="h-5 w-5" aria-hidden="true"></i></span>
+                <span class="badge badge-sand">Outpatient</span>
+              </div>
+              <h3 class="display-4 mt-4">Dermatology clinic</h3>
+              <p class="mt-2 flex-1 text-sm leading-relaxed text-ink-soft">Care for skin, hair and nail conditions, including eczema, acne, psoriasis and skin cancer screening.</p>
+              <a class="text-link mt-5" href="appointment.html?specialty=dermatology">Request an appointment <i data-lucide="arrow-right" class="h-4 w-4" aria-hidden="true"></i></a>
+            </article>
+
+            <article class="card card-pad card-hover flex flex-col" data-service-card data-category="outpatient">
+              <div class="flex items-start justify-between gap-3">
+                <span class="flex h-11 w-11 items-center justify-center rounded-xl bg-teal-50 text-teal-700"><i data-lucide="ear" class="h-5 w-5" aria-hidden="true"></i></span>
+                <span class="badge badge-sand">Outpatient</span>
+              </div>
+              <h3 class="display-4 mt-4">ENT clinic</h3>
+              <p class="mt-2 flex-1 text-sm leading-relaxed text-ink-soft">Assessment for sinus problems, hearing loss, recurrent throat infections and voice changes.</p>
+              <a class="text-link mt-5" href="appointment.html?specialty=ent">Request an appointment <i data-lucide="arrow-right" class="h-4 w-4" aria-hidden="true"></i></a>
+            </article>
+
+            <article class="card card-pad card-hover flex flex-col" data-service-card data-category="outpatient">
+              <div class="flex items-start justify-between gap-3">
+                <span class="flex h-11 w-11 items-center justify-center rounded-xl bg-teal-50 text-teal-700"><i data-lucide="eye" class="h-5 w-5" aria-hidden="true"></i></span>
+                <span class="badge badge-sand">Outpatient</span>
+              </div>
+              <h3 class="display-4 mt-4">Eye clinic</h3>
+              <p class="mt-2 flex-1 text-sm leading-relaxed text-ink-soft">Vision assessment, dry eye care and long-term monitoring for glaucoma and diabetic eye disease.</p>
+              <a class="text-link mt-5" href="appointment.html?specialty=ophthalmology">Request an appointment <i data-lucide="arrow-right" class="h-4 w-4" aria-hidden="true"></i></a>
+            </article>
+
+            <!-- Surgical -->
+            <article class="card card-pad card-hover flex flex-col" data-service-card data-category="surgical">
+              <div class="flex items-start justify-between gap-3">
+                <span class="flex h-11 w-11 items-center justify-center rounded-xl bg-teal-50 text-teal-700"><i data-lucide="bone" class="h-5 w-5" aria-hidden="true"></i></span>
+                <span class="badge badge-sand">Surgery</span>
+              </div>
+              <h3 class="display-4 mt-4">Orthopedic surgery</h3>
+              <p class="mt-2 flex-1 text-sm leading-relaxed text-ink-soft">Hip and knee replacement, shoulder surgery and fracture care, with rehabilitation planned from the start.</p>
+              <a class="text-link mt-5" href="appointment.html?specialty=orthopedics">Request an appointment <i data-lucide="arrow-right" class="h-4 w-4" aria-hidden="true"></i></a>
+            </article>
+
+            <article class="card card-pad card-hover flex flex-col" data-service-card data-category="surgical">
+              <div class="flex items-start justify-between gap-3">
+                <span class="flex h-11 w-11 items-center justify-center rounded-xl bg-teal-50 text-teal-700"><i data-lucide="eye" class="h-5 w-5" aria-hidden="true"></i></span>
+                <span class="badge badge-sand">Surgery</span>
+              </div>
+              <h3 class="display-4 mt-4">Cataract surgery</h3>
+              <p class="mt-2 flex-1 text-sm leading-relaxed text-ink-soft">Day-case cataract assessment and surgery, with clear pre- and post-operative guidance.</p>
+              <a class="text-link mt-5" href="appointment.html?specialty=ophthalmology">Request an appointment <i data-lucide="arrow-right" class="h-4 w-4" aria-hidden="true"></i></a>
+            </article>
+
+            <article class="card card-pad card-hover flex flex-col" data-service-card data-category="surgical">
+              <div class="flex items-start justify-between gap-3">
+                <span class="flex h-11 w-11 items-center justify-center rounded-xl bg-teal-50 text-teal-700"><i data-lucide="ribbon" class="h-5 w-5" aria-hidden="true"></i></span>
+                <span class="badge badge-sand">Surgery</span>
+              </div>
+              <h3 class="display-4 mt-4">Gynecologic surgery</h3>
+              <p class="mt-2 flex-1 text-sm leading-relaxed text-ink-soft">Minimally invasive procedures for selected gynecologic conditions, coordinated with the women's health team.</p>
+              <a class="text-link mt-5" href="appointment.html?specialty=gynecology">Request an appointment <i data-lucide="arrow-right" class="h-4 w-4" aria-hidden="true"></i></a>
+            </article>
+
+            <!-- Family -->
+            <article class="card card-pad card-hover flex flex-col" data-service-card data-category="family">
+              <div class="flex items-start justify-between gap-3">
+                <span class="flex h-11 w-11 items-center justify-center rounded-xl bg-teal-50 text-teal-700"><i data-lucide="baby" class="h-5 w-5" aria-hidden="true"></i></span>
+                <span class="badge badge-sand">Family</span>
+              </div>
+              <h3 class="display-4 mt-4">Pediatrics</h3>
+              <p class="mt-2 flex-1 text-sm leading-relaxed text-ink-soft">Newborn checks, childhood illness, development, asthma and vaccination conversations for children and teens.</p>
+              <a class="text-link mt-5" href="appointment.html?specialty=pediatrics">Request an appointment <i data-lucide="arrow-right" class="h-4 w-4" aria-hidden="true"></i></a>
+            </article>
+
+            <article class="card card-pad card-hover flex flex-col" data-service-card data-category="family">
+              <div class="flex items-start justify-between gap-3">
+                <span class="flex h-11 w-11 items-center justify-center rounded-xl bg-teal-50 text-teal-700"><i data-lucide="heart-handshake" class="h-5 w-5" aria-hidden="true"></i></span>
+                <span class="badge badge-sand">Family</span>
+              </div>
+              <h3 class="display-4 mt-4">Maternity &amp; prenatal care</h3>
+              <p class="mt-2 flex-1 text-sm leading-relaxed text-ink-soft">Pregnancy care shared between midwives and obstetricians, with private birth suites and neonatal support.</p>
+              <a class="text-link mt-5" href="appointment.html?specialty=gynecology">Request an appointment <i data-lucide="arrow-right" class="h-4 w-4" aria-hidden="true"></i></a>
+            </article>
+
+            <!-- Diagnostics -->
+            <article class="card card-pad card-hover flex flex-col" data-service-card data-category="diagnostics">
+              <div class="flex items-start justify-between gap-3">
+                <span class="flex h-11 w-11 items-center justify-center rounded-xl bg-teal-50 text-teal-700"><i data-lucide="scan-line" class="h-5 w-5" aria-hidden="true"></i></span>
+                <span class="badge badge-sand">Diagnostics</span>
+              </div>
+              <h3 class="display-4 mt-4">Imaging &amp; radiology</h3>
+              <p class="mt-2 flex-1 text-sm leading-relaxed text-ink-soft">Ultrasound, CT, MRI and breast imaging, reported by consultant radiologists. Most scans require a referral.</p>
+              <a class="text-link mt-5" href="departments.html#imaging">Imaging department <i data-lucide="arrow-right" class="h-4 w-4" aria-hidden="true"></i></a>
+            </article>
+
+            <article class="card card-pad card-hover flex flex-col" data-service-card data-category="diagnostics">
+              <div class="flex items-start justify-between gap-3">
+                <span class="flex h-11 w-11 items-center justify-center rounded-xl bg-teal-50 text-teal-700"><i data-lucide="test-tube" class="h-5 w-5" aria-hidden="true"></i></span>
+                <span class="badge badge-sand">Diagnostics</span>
+              </div>
+              <h3 class="display-4 mt-4">Laboratory services</h3>
+              <p class="mt-2 flex-1 text-sm leading-relaxed text-ink-soft">Blood tests, microbiology and pathology supporting inpatient, emergency and outpatient care.</p>
+              <a class="text-link mt-5" href="departments.html#laboratory">Laboratory department <i data-lucide="arrow-right" class="h-4 w-4" aria-hidden="true"></i></a>
+            </article>
+
+            <article class="card card-pad card-hover flex flex-col" data-service-card data-category="diagnostics">
+              <div class="flex items-start justify-between gap-3">
+                <span class="flex h-11 w-11 items-center justify-center rounded-xl bg-teal-50 text-teal-700"><i data-lucide="activity" class="h-5 w-5" aria-hidden="true"></i></span>
+                <span class="badge badge-sand">Diagnostics</span>
+              </div>
+              <h3 class="display-4 mt-4">Cardiac diagnostics</h3>
+              <p class="mt-2 flex-1 text-sm leading-relaxed text-ink-soft">ECG, ambulatory monitoring and echocardiography to understand heart rhythm, structure and function.</p>
+              <a class="text-link mt-5" href="appointment.html?specialty=cardiology">Request an appointment <i data-lucide="arrow-right" class="h-4 w-4" aria-hidden="true"></i></a>
+            </article>
+
+            <!-- Therapy -->
+            <article class="card card-pad card-hover flex flex-col" data-service-card data-category="therapy">
+              <div class="flex items-start justify-between gap-3">
+                <span class="flex h-11 w-11 items-center justify-center rounded-xl bg-teal-50 text-teal-700"><i data-lucide="dumbbell" class="h-5 w-5" aria-hidden="true"></i></span>
+                <span class="badge badge-sand">Therapy</span>
+              </div>
+              <h3 class="display-4 mt-4">Physiotherapy &amp; rehabilitation</h3>
+              <p class="mt-2 flex-1 text-sm leading-relaxed text-ink-soft">Movement, strength and recovery programmes after injury, surgery, stroke or a long hospital stay.</p>
+              <a class="text-link mt-5" href="departments.html#rehabilitation">Rehabilitation department <i data-lucide="arrow-right" class="h-4 w-4" aria-hidden="true"></i></a>
+            </article>
+
+            <article class="card card-pad card-hover flex flex-col" data-service-card data-category="therapy">
+              <div class="flex items-start justify-between gap-3">
+                <span class="flex h-11 w-11 items-center justify-center rounded-xl bg-teal-50 text-teal-700"><i data-lucide="mic" class="h-5 w-5" aria-hidden="true"></i></span>
+                <span class="badge badge-sand">Therapy</span>
+              </div>
+              <h3 class="display-4 mt-4">Speech &amp; language therapy</h3>
+              <p class="mt-2 flex-1 text-sm leading-relaxed text-ink-soft">Support for voice, swallowing and communication after stroke, surgery or neurological change.</p>
+              <a class="text-link mt-5" href="contact.html">Ask about referrals <i data-lucide="arrow-right" class="h-4 w-4" aria-hidden="true"></i></a>
+            </article>
+          </div>
+
+          <div class="mt-8 rounded-card border border-line bg-sand-50 p-8 text-center" id="service-empty" hidden>
+            <span class="mx-auto flex h-12 w-12 items-center justify-center rounded-full bg-white text-ink-faint">
+              <i data-lucide="search-x" class="h-6 w-6" aria-hidden="true"></i>
+            </span>
+            <h3 class="display-3 mt-4">No services match that search.</h3>
+            <p class="mx-auto mt-2 max-w-md text-sm leading-relaxed text-ink-soft">Try a different term or clear the filters. If you are unsure where to start, contact reception and we will point you in the right direction.</p>
+            <button class="btn btn-secondary mt-5" type="button" data-service-reset>Clear filters</button>
+          </div>
+        </div>
+        <p class="note mt-6">Service names, availability and clinical descriptions are fictional sample content. This site is not a real healthcare provider.</p>
+      </div>
+    </section>
+
+    <!-- Emergency -->
+    <section class="section bg-sand-50" id="emergency" aria-labelledby="emergency-title">
+      <div class="container-site">
+        <div class="grid items-center gap-10 lg:grid-cols-12 lg:gap-14">
+          <div class="lg:col-span-6">
+            <div class="img-frame aspect-[4/3] shadow-soft">
+              <img src="assets/images/departments/emergency.jpg" alt="An emergency department treatment bay prepared with monitoring equipment and a hospital bed" width="1200" height="900" loading="lazy">
+            </div>
+            <p class="media-caption">Sample emergency bay at our fictional hospital.</p>
+          </div>
+          <div class="lg:col-span-6">
+            <span class="eyebrow text-alert">Emergency care</span>
+            <h2 class="section-title mt-4" id="emergency-title">Emergency care, every hour of every day.</h2>
+            <p class="section-copy">Our emergency department is staffed 24 hours a day, with imaging, laboratory and critical care teams on site. If you are unsure whether something is an emergency, call us and we will help you decide.</p>
+            <div class="mt-6 rounded-xl border border-alert/25 bg-alert/5 p-5">
+              <p class="flex items-center gap-2 text-sm font-bold text-alert"><i data-lucide="shield-alert" class="h-4 w-4" aria-hidden="true"></i> Call 911 for a life-threatening emergency</p>
+              <p class="mt-2 text-sm leading-relaxed text-ink-soft">Examples include chest pain, difficulty breathing, severe bleeding, sudden weakness or confusion, a serious injury, or a baby who is unresponsive.</p>
+            </div>
+            <div class="mt-6 grid gap-3 sm:grid-cols-2">
+              <a class="btn btn-emergency" href="tel:+15550149111"><i data-lucide="phone-call" aria-hidden="true"></i>(555) 014-9111</a>
+              <a class="btn btn-secondary" href="contact.html">Find the entrance</a>
+            </div>
+            <p class="note mt-4">Fictional phone number and service details for this demonstration.</p>
+          </div>
+        </div>
+
+        <div class="mt-12 grid gap-5 md:grid-cols-3">
+          <div class="card card-pad">
+            <span class="flex h-10 w-10 items-center justify-center rounded-full bg-sky-100 text-teal-700"><i data-lucide="clipboard-list" class="h-5 w-5" aria-hidden="true"></i></span>
+            <h3 class="display-4 mt-4">When you arrive</h3>
+            <p class="mt-2 text-sm leading-relaxed text-ink-soft">A triage nurse will assess how urgent your symptoms are. The most seriously unwell patients are seen first, regardless of arrival time.</p>
+          </div>
+          <div class="card card-pad">
+            <span class="flex h-10 w-10 items-center justify-center rounded-full bg-sky-100 text-teal-700"><i data-lucide="users" class="h-5 w-5" aria-hidden="true"></i></span>
+            <h3 class="display-4 mt-4">Bring what you can</h3>
+            <p class="mt-2 text-sm leading-relaxed text-ink-soft">If possible, bring a medication list, identification and details of allergies. Do not delay coming in to collect paperwork.</p>
+          </div>
+          <div class="card card-pad">
+            <span class="flex h-10 w-10 items-center justify-center rounded-full bg-sky-100 text-teal-700"><i data-lucide="message-circle" class="h-5 w-5" aria-hidden="true"></i></span>
+            <h3 class="display-4 mt-4">Ask for an update</h3>
+            <p class="mt-2 text-sm leading-relaxed text-ink-soft">Waiting is difficult. A staff member can explain what is happening and what the next step is. Please treat the team with respect.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Diagnostics -->
+    <section class="section" id="diagnostics" aria-labelledby="diagnostics-title">
+      <div class="container-site">
+        <div class="grid gap-10 lg:grid-cols-12 lg:gap-14">
+          <div class="lg:col-span-5">
+            <span class="eyebrow">Diagnostics</span>
+            <h2 class="section-title mt-4" id="diagnostics-title">Answers, with context.</h2>
+            <p class="section-copy">A test is only useful if it answers a clear question. Our fictional imaging and laboratory teams work with your clinician to make sure every scan and sample has a purpose — and every result comes with an explanation.</p>
+            <ul class="check-list mt-6">
+              <li><i data-lucide="scan-line" aria-hidden="true"></i><span>Ultrasound, CT, MRI and plain imaging</span></li>
+              <li><i data-lucide="test-tube" aria-hidden="true"></i><span>Blood sciences, microbiology and pathology</span></li>
+              <li><i data-lucide="shield-check" aria-hidden="true"></i><span>Radiation safety and contrast review</span></li>
+              <li><i data-lucide="file-text" aria-hidden="true"></i><span>Results explained by your referring team</span></li>
+            </ul>
+            <div class="cta-row mt-7">
+              <a class="btn btn-primary" href="departments.html#imaging">Our imaging department</a>
+              <a class="btn btn-secondary" href="contact.html">Ask about a referral</a>
+            </div>
+          </div>
+          <div class="lg:col-span-7">
+            <div class="grid gap-5 sm:grid-cols-2">
+              <div class="img-frame aspect-[4/5]">
+                <img src="assets/images/departments/imaging.jpg" alt="A bright imaging suite with a CT scanner and technologist at a control desk" width="1200" height="1500" loading="lazy">
+              </div>
+              <div class="img-frame aspect-[4/5]">
+                <img src="assets/images/departments/laboratory.jpg" alt="A laboratory scientist examining samples at a bench with analysers behind" width="1200" height="1500" loading="lazy">
+              </div>
+            </div>
+            <p class="media-caption">Illustrative imaging and laboratory facilities.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="emergency-band">
+      <div class="container-wide relative z-10 py-12">
+        <div class="flex flex-col gap-6 lg:flex-row lg:items-center lg:justify-between">
+          <div>
+            <h2 class="display-3 text-white">Not sure which service you need?</h2>
+            <p class="mt-2 max-w-xl text-sm leading-relaxed text-white/70">Our fictional reception team can help you choose the right clinic or let you know if you should come to the emergency department.</p>
+          </div>
+          <div class="cta-row">
+            <a class="btn btn-light" href="contact.html">Contact reception <i data-lucide="arrow-right" aria-hidden="true"></i></a>
+            <a class="btn btn-outline-light" href="appointment.html">Request an appointment</a>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <div id="site-footer"></div>
+</body>
+</html>

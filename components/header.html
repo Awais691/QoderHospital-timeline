@@ -1,0 +1,174 @@
+<header id="site-header" class="site-header">
+  <div class="container-wide header-inner">
+    <a class="brand" href="index.html" aria-label="CareWell Hospital — home">
+      <svg width="42" height="42" viewBox="0 0 64 64" aria-hidden="true" class="shrink-0">
+        <rect width="64" height="64" rx="18" fill="#083A56"/>
+        <path d="M32 12.5c5.8 5.4 9.3 10.3 9.3 15.6 0 5.2-4.1 9.6-9.3 9.6s-9.3-4.4-9.3-9.6c0-5.3 3.5-10.2 9.3-15.6Z" fill="#EEF7F5"/>
+        <path d="M12.5 32c5.4-5.8 10.3-9.3 15.6-9.3 5.2 0 9.6 4.1 9.6 9.3s-4.4 9.3-9.6 9.3c-5.3 0-10.2-3.5-15.6-9.3Z" fill="#7FD1C7"/>
+        <circle cx="32" cy="32" r="3.2" fill="#083A56"/>
+      </svg>
+      <span class="brand-wordmark">
+        <span class="brand-name">CareWell</span>
+        <span class="brand-sub">Hospital</span>
+      </span>
+    </a>
+
+    <nav class="nav-desktop" aria-label="Primary navigation">
+      <div class="nav-item">
+        <a class="nav-link" href="index.html" data-nav="home">Home</a>
+      </div>
+      <div class="nav-item">
+        <a class="nav-link" href="about.html" data-nav="about">About</a>
+      </div>
+      <div class="nav-item" data-dropdown>
+        <button class="nav-link" type="button" aria-expanded="false" aria-controls="nav-care" data-dropdown-toggle>
+          Care
+          <i data-lucide="chevron-down" class="nav-caret" aria-hidden="true"></i>
+        </button>
+        <div class="nav-dropdown" id="nav-care">
+          <a class="dropdown-link" href="services.html" data-nav="services">
+            <i data-lucide="stethoscope" class="mt-0.5 h-4 w-4 shrink-0 text-teal-600" aria-hidden="true"></i>
+            <span><strong>Services &amp; treatments</strong><span>Everyday care and specialist treatment</span></span>
+          </a>
+          <a class="dropdown-link" href="specialties.html" data-nav="specialties">
+            <i data-lucide="heart-pulse" class="mt-0.5 h-4 w-4 shrink-0 text-teal-600" aria-hidden="true"></i>
+            <span><strong>Medical specialties</strong><span>Ten focused areas of clinical care</span></span>
+          </a>
+          <a class="dropdown-link" href="departments.html" data-nav="departments">
+            <i data-lucide="building-2" class="mt-0.5 h-4 w-4 shrink-0 text-teal-600" aria-hidden="true"></i>
+            <span><strong>Departments</strong><span>How our hospital is organised</span></span>
+          </a>
+          <a class="dropdown-link" href="services.html#emergency">
+            <i data-lucide="ambulance" class="mt-0.5 h-4 w-4 shrink-0 text-alert" aria-hidden="true"></i>
+            <span><strong>Emergency care</strong><span>Open 24 hours, every day</span></span>
+          </a>
+        </div>
+      </div>
+      <div class="nav-item">
+        <a class="nav-link" href="doctors.html" data-nav="doctors">Doctors</a>
+      </div>
+      <div class="nav-item" data-dropdown>
+        <button class="nav-link" type="button" aria-expanded="false" aria-controls="nav-patients" data-dropdown-toggle>
+          Patients
+          <i data-lucide="chevron-down" class="nav-caret" aria-hidden="true"></i>
+        </button>
+        <div class="nav-dropdown" id="nav-patients">
+          <a class="dropdown-link" href="appointment.html" data-nav="appointment">
+            <i data-lucide="calendar-check" class="mt-0.5 h-4 w-4 shrink-0 text-teal-600" aria-hidden="true"></i>
+            <span><strong>Book an appointment</strong><span>Request a visit in a few steps</span></span>
+          </a>
+          <a class="dropdown-link" href="patient-information.html" data-nav="patient-information">
+            <i data-lucide="clipboard-list" class="mt-0.5 h-4 w-4 shrink-0 text-teal-600" aria-hidden="true"></i>
+            <span><strong>Patient information</strong><span>Prepare for your visit</span></span>
+          </a>
+          <a class="dropdown-link" href="patient-information.html#visiting">
+            <i data-lucide="clock" class="mt-0.5 h-4 w-4 shrink-0 text-teal-600" aria-hidden="true"></i>
+            <span><strong>Visiting information</strong><span>Hours, support and guidance</span></span>
+          </a>
+          <a class="dropdown-link" href="faq.html" data-nav="faq">
+            <i data-lucide="message-circle-question" class="mt-0.5 h-4 w-4 shrink-0 text-teal-600" aria-hidden="true"></i>
+            <span><strong>Frequently asked questions</strong><span>Quick answers about your care</span></span>
+          </a>
+          <a class="dropdown-link" href="blog.html" data-nav="blog">
+            <i data-lucide="book-open" class="mt-0.5 h-4 w-4 shrink-0 text-teal-600" aria-hidden="true"></i>
+            <span><strong>Health journal</strong><span>Practical, responsible reading</span></span>
+          </a>
+        </div>
+      </div>
+      <div class="nav-item">
+        <a class="nav-link" href="contact.html" data-nav="contact">Contact</a>
+      </div>
+    </nav>
+
+    <div class="header-actions">
+      <a href="tel:+15550149111" class="emergency-quick xl:flex">
+        <span class="pulse-dot" aria-hidden="true"></span>
+        <span>24/7<br><span class="text-[10px] font-semibold uppercase tracking-[0.12em] text-ink-faint">Emergency</span></span>
+      </a>
+      <a class="btn btn-primary btn-sm" href="appointment.html">
+        Book an appointment
+        <i data-lucide="arrow-up-right" aria-hidden="true"></i>
+      </a>
+    </div>
+
+    <button class="menu-toggle" type="button" aria-expanded="false" aria-controls="mobile-menu" data-menu-toggle>
+      <span class="sr-only">Open menu</span>
+      <i data-lucide="menu" aria-hidden="true"></i>
+    </button>
+  </div>
+</header>
+
+<div class="mobile-menu" id="mobile-menu" aria-hidden="true">
+  <div class="mobile-backdrop" data-menu-close aria-hidden="true"></div>
+  <div class="mobile-panel" role="dialog" aria-modal="true" aria-label="Site menu">
+    <div class="mobile-panel-head">
+      <a class="brand" href="index.html" aria-label="CareWell Hospital — home" data-menu-close>
+        <svg width="36" height="36" viewBox="0 0 64 64" aria-hidden="true" class="shrink-0">
+          <rect width="64" height="64" rx="18" fill="#083A56"/>
+          <path d="M32 12.5c5.8 5.4 9.3 10.3 9.3 15.6 0 5.2-4.1 9.6-9.3 9.6s-9.3-4.4-9.3-9.6c0-5.3 3.5-10.2 9.3-15.6Z" fill="#EEF7F5"/>
+          <path d="M12.5 32c5.4-5.8 10.3-9.3 15.6-9.3 5.2 0 9.6 4.1 9.6 9.3s-4.4 9.3-9.6 9.3c-5.3 0-10.2-3.5-15.6-9.3Z" fill="#7FD1C7"/>
+          <circle cx="32" cy="32" r="3.2" fill="#083A56"/>
+        </svg>
+        <span class="brand-wordmark">
+          <span class="brand-name text-[21px]">CareWell</span>
+          <span class="brand-sub">Hospital</span>
+        </span>
+      </a>
+      <button class="icon-btn" type="button" data-menu-close>
+        <span class="sr-only">Close menu</span>
+        <i data-lucide="x" aria-hidden="true"></i>
+      </button>
+    </div>
+    <div class="mobile-panel-body">
+      <nav aria-label="Mobile navigation">
+        <a class="mobile-nav-link" href="index.html" data-nav="home">Home <i data-lucide="arrow-up-right" class="h-4 w-4 text-ink-faint" aria-hidden="true"></i></a>
+        <a class="mobile-nav-link" href="about.html" data-nav="about">About CareWell <i data-lucide="arrow-up-right" class="h-4 w-4 text-ink-faint" aria-hidden="true"></i></a>
+        <div>
+          <button class="mobile-nav-link w-full" type="button" aria-expanded="false" aria-controls="mobile-care" data-submenu-toggle>
+            Care
+            <i data-lucide="chevron-down" class="h-4 w-4 text-ink-faint" aria-hidden="true"></i>
+          </button>
+          <div class="mobile-sub" id="mobile-care">
+            <div inert>
+              <a href="services.html">Services &amp; treatments</a>
+              <a href="specialties.html">Medical specialties</a>
+              <a href="departments.html">Departments</a>
+              <a href="services.html#emergency">Emergency care</a>
+            </div>
+          </div>
+        </div>
+        <a class="mobile-nav-link" href="doctors.html" data-nav="doctors">Find a doctor <i data-lucide="arrow-up-right" class="h-4 w-4 text-ink-faint" aria-hidden="true"></i></a>
+        <div>
+          <button class="mobile-nav-link w-full" type="button" aria-expanded="false" aria-controls="mobile-patients" data-submenu-toggle>
+            Patients &amp; visitors
+            <i data-lucide="chevron-down" class="h-4 w-4 text-ink-faint" aria-hidden="true"></i>
+          </button>
+          <div class="mobile-sub" id="mobile-patients">
+            <div inert>
+              <a href="appointment.html">Book an appointment</a>
+              <a href="patient-information.html">Patient information</a>
+              <a href="patient-information.html#visiting">Visiting information</a>
+              <a href="faq.html">Frequently asked questions</a>
+              <a href="blog.html">Health journal</a>
+            </div>
+          </div>
+        </div>
+        <a class="mobile-nav-link" href="contact.html" data-nav="contact">Contact &amp; location <i data-lucide="arrow-up-right" class="h-4 w-4 text-ink-faint" aria-hidden="true"></i></a>
+      </nav>
+      <div class="mt-6 rounded-xl bg-sand-50 p-4">
+        <p class="text-[11px] font-bold uppercase tracking-[0.14em] text-ink-faint">Emergency &amp; urgent care</p>
+        <a href="tel:+15550149111" class="mt-1 flex items-center gap-2 font-display text-xl font-semibold text-navy-900">
+          <i data-lucide="phone" class="h-4 w-4 text-alert" aria-hidden="true"></i>
+          (555) 014-9111
+        </a>
+        <p class="mt-1 text-xs text-ink-soft">Open 24 hours, every day. For a life-threatening emergency call 911.</p>
+      </div>
+    </div>
+    <div class="mobile-panel-foot">
+      <a class="btn btn-primary btn-block" href="appointment.html">
+        Book an appointment
+        <i data-lucide="arrow-up-right" aria-hidden="true"></i>
+      </a>
+    </div>
+  </div>
+</div>

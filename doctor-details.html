@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en" class="no-js">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Doctor Profile | CareWell Hospital</title>
+  <meta name="description" content="Read a fictional CareWell Hospital doctor profile, including specialty, areas of expertise, sample schedule and demo appointment request.">
+  <meta name="theme-color" content="#083A56">
+  <link rel="icon" href="assets/images/brand/favicon.svg" type="image/svg+xml">
+  <link rel="preload" href="assets/fonts/manrope-latin.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="preload" href="assets/fonts/fraunces-latin.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="stylesheet" href="assets/css/custom.css">
+  <meta property="og:type" content="profile">
+  <meta property="og:site_name" content="CareWell Hospital">
+  <meta property="og:title" content="Doctor Profile | CareWell Hospital">
+  <meta property="og:description" content="Fictional clinician profile from CareWell Hospital.">
+  <meta property="og:image" content="assets/images/brand/og-carewell.jpg">
+  <meta name="twitter:card" content="summary_large_image">
+  <script>document.documentElement.classList.remove('no-js');document.documentElement.classList.add('js');</script>
+  <script src="assets/js/lucide.min.js" defer></script>
+  <script src="assets/js/components.js" defer></script>
+  <script src="assets/js/navigation.js" defer></script>
+  <script src="assets/js/main.js" defer></script>
+  <script src="assets/js/doctors.js" defer></script>
+  <script src="assets/js/appointments.js" defer></script>
+</head>
+<body id="top">
+  <a class="skip-link" href="#main">Skip to content</a>
+  <div id="emergency-bar" class="min-h-[36px]"></div>
+  <div id="site-header" class="min-h-[74px]"></div>
+
+  <main id="main">
+    <section class="page-hero" id="doctor-hero">
+      <div class="page-hero-inner container-site">
+        <nav aria-label="Breadcrumb">
+          <ol class="breadcrumb">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="doctors.html">Doctors</a></li>
+            <li><span aria-current="page">Doctor profile</span></li>
+          </ol>
+        </nav>
+        <div class="mt-8 max-w-2xl">
+          <h1 class="display-2 mt-4">Doctor profile</h1>
+          <p class="lead mt-4">This profile is generated from our fictional clinician directory. Please enable JavaScript to view it, or browse the directory instead.</p>
+          <a class="btn btn-primary mt-6" href="doctors.html">Browse all doctors</a>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" id="doctor-body">
+      <div class="container-site">
+        <p class="rounded-card border border-line bg-sand-50 p-6 text-sm text-ink-soft">Loading the clinician profile…</p>
+      </div>
+    </section>
+
+    <noscript>
+      <div class="container-site pb-16">
+        <div class="rounded-card border border-alert/25 bg-alert/5 p-6 text-sm leading-relaxed text-ink-soft">
+          <p class="font-bold text-navy-900">JavaScript is required to display individual doctor profiles.</p>
+          <p class="mt-2">You can still <a class="font-bold text-navy-900 underline underline-offset-2" href="doctors.html">browse the directory</a> or <a class="font-bold text-navy-900 underline underline-offset-2" href="contact.html">contact reception</a> for help.</p>
+        </div>
+      </div>
+    </noscript>
+
+    <section class="section bg-sand-50" id="book">
+      <div class="container-site">
+        <div id="doctor-booking"></div>
+      </div>
+    </section>
+
+    <section class="section" aria-labelledby="related-title">
+      <div class="container-site">
+        <div class="flex flex-col gap-4 sm:flex-row sm:items-end sm:justify-between">
+          <div>
+            <span class="eyebrow">Other clinicians</span>
+            <h2 class="section-title mt-4" id="related-title">You may also like to meet.</h2>
+          </div>
+          <a class="btn btn-secondary shrink-0" href="doctors.html">View all doctors</a>
+        </div>
+        <div class="mt-9 grid gap-5 sm:grid-cols-2 lg:grid-cols-3" id="related-doctors"></div>
+        <p class="note mt-6">All profiles, credentials, schedules and availability are fictional sample content.</p>
+      </div>
+    </section>
+
+    <section class="emergency-band">
+      <div class="container-wide relative z-10 py-12">
+        <div class="flex flex-col gap-6 lg:flex-row lg:items-center lg:justify-between">
+          <div>
+            <span class="inline-flex items-center gap-2 text-[11px] font-bold uppercase tracking-[0.18em] text-teal-100"><span class="pulse-dot" aria-hidden="true"></span> Need urgent help?</span>
+            <h2 class="display-3 mt-3 text-white">Do not wait for an appointment.</h2>
+            <p class="mt-2 max-w-xl text-sm leading-relaxed text-white/70">For chest pain, severe breathlessness, fainting or sudden weakness, call emergency services. Our emergency department is open 24/7.</p>
+          </div>
+          <div class="cta-row">
+            <a class="btn btn-emergency" href="tel:+15550149111"><i data-lucide="phone-call" aria-hidden="true"></i>Call (555) 014-9111</a>
+            <a class="btn btn-outline-light" href="services.html#emergency">Emergency information</a>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <div id="site-footer"></div>
+</body>
+</html>

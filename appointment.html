@@ -1,0 +1,202 @@
+<!DOCTYPE html>
+<html lang="en" class="no-js">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Book an Appointment | CareWell Hospital</title>
+  <meta name="description" content="Request a fictional CareWell Hospital appointment using our demo form. Choose a specialty, preferred clinician, date and time. No real booking is made.">
+  <meta name="theme-color" content="#083A56">
+  <link rel="icon" href="assets/images/brand/favicon.svg" type="image/svg+xml">
+  <link rel="preload" href="assets/fonts/manrope-latin.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="preload" href="assets/fonts/fraunces-latin.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="stylesheet" href="assets/css/custom.css">
+  <meta property="og:type" content="website">
+  <meta property="og:site_name" content="CareWell Hospital">
+  <meta property="og:title" content="Book an Appointment | CareWell Hospital">
+  <meta property="og:description" content="Request a demo appointment at our fictional hospital.">
+  <meta property="og:image" content="assets/images/brand/og-carewell.jpg">
+  <meta name="twitter:card" content="summary_large_image">
+  <script>document.documentElement.classList.remove('no-js');document.documentElement.classList.add('js');</script>
+  <script src="assets/js/lucide.min.js" defer></script>
+  <script src="assets/js/components.js" defer></script>
+  <script src="assets/js/navigation.js" defer></script>
+  <script src="assets/js/main.js" defer></script>
+  <script src="assets/js/doctors.js" defer></script>
+  <script src="assets/js/appointments.js" defer></script>
+</head>
+<body id="top">
+  <a class="skip-link" href="#main">Skip to content</a>
+  <div id="emergency-bar" class="min-h-[36px]"></div>
+  <div id="site-header" class="min-h-[74px]"></div>
+
+  <main id="main">
+    <section class="page-hero">
+      <div class="hero-pattern" aria-hidden="true"></div>
+      <div class="container-site">
+        <div class="page-hero-inner">
+          <nav aria-label="Breadcrumb">
+            <ol class="breadcrumb">
+              <li><a href="index.html">Home</a></li>
+              <li><a href="patient-information.html">Patients</a></li>
+              <li><span aria-current="page">Book an appointment</span></li>
+            </ol>
+          </nav>
+          <div class="mt-8 grid gap-10 lg:mt-10 lg:grid-cols-12 lg:items-end lg:gap-14">
+            <div class="lg:col-span-8">
+              <span class="eyebrow">Appointment request</span>
+              <h1 class="display-1 mt-5">Let us find a time that works.</h1>
+              <p class="lead mt-6 max-w-2xl">Tell us who you would like to see and when you are available. In a real hospital, the clinic would review your request and confirm the details with you.</p>
+            </div>
+            <div class="lg:col-span-4">
+              <div class="form-notice">
+                <i data-lucide="info" aria-hidden="true"></i>
+                <p><strong class="font-bold text-navy-900">This is a demonstration form.</strong> Nothing is sent, stored or booked. The summary you see is generated in your browser only.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" aria-labelledby="request-title">
+      <div class="container-site">
+        <div class="grid gap-8 lg:grid-cols-12 lg:gap-10">
+          <div class="lg:col-span-8">
+            <div class="card p-6 sm:p-8" data-appointment-form-card>
+              <span class="eyebrow">Step 1 of 1</span>
+              <h2 class="display-2 mt-3" id="request-title">Appointment details</h2>
+              <p class="mt-3 text-sm leading-relaxed text-ink-soft">Fields marked with an asterisk are required. Please do not include sensitive medical details in the optional note.</p>
+
+              <form class="mt-7" data-appointment-form novalidate>
+                <div class="form-grid">
+                  <div class="field">
+                    <label class="field-label" for="appt-name">Patient's full name <span class="text-alert" aria-hidden="true">*</span></label>
+                    <input class="field-input" id="appt-name" name="name" type="text" autocomplete="name" required aria-describedby="appt-name-error">
+                    <span class="field-error" id="appt-name-error" data-error-for="name"></span>
+                  </div>
+                  <div class="field">
+                    <label class="field-label" for="appt-email">Email address <span class="text-alert" aria-hidden="true">*</span></label>
+                    <input class="field-input" id="appt-email" name="email" type="email" autocomplete="email" required aria-describedby="appt-email-error">
+                    <span class="field-error" id="appt-email-error" data-error-for="email"></span>
+                  </div>
+                  <div class="field">
+                    <label class="field-label" for="appt-phone">Phone number <span class="text-alert" aria-hidden="true">*</span></label>
+                    <input class="field-input" id="appt-phone" name="phone" type="tel" autocomplete="tel" required aria-describedby="appt-phone-error">
+                    <span class="field-error" id="appt-phone-error" data-error-for="phone"></span>
+                  </div>
+                  <div class="field">
+                    <label class="field-label" for="appt-specialty">Specialty <span class="text-alert" aria-hidden="true">*</span></label>
+                    <select class="field-select" id="appt-specialty" name="specialty" required aria-describedby="appt-specialty-error">
+                      <option value="">Choose a specialty</option>
+                    </select>
+                    <span class="field-error" id="appt-specialty-error" data-error-for="specialty"></span>
+                  </div>
+                  <div class="field field-full">
+                    <label class="field-label" for="appt-doctor">Doctor <span class="text-alert" aria-hidden="true">*</span></label>
+                    <select class="field-select" id="appt-doctor" name="doctor" required aria-describedby="appt-doctor-error">
+                      <option value="">Choose a doctor</option>
+                    </select>
+                    <p class="field-hint">Choose a specific clinician, or let the clinic assign the first available.</p>
+                    <span class="field-error" id="appt-doctor-error" data-error-for="doctor"></span>
+                  </div>
+                  <div class="field">
+                    <label class="field-label" for="appt-date">Preferred date <span class="text-alert" aria-hidden="true">*</span></label>
+                    <input class="field-input" id="appt-date" name="date" type="date" required aria-describedby="appt-date-error">
+                    <p class="field-hint">Weekdays and Saturdays, up to six months ahead. Sample clinics are closed on Sundays.</p>
+                    <span class="field-error" id="appt-date-error" data-error-for="date"></span>
+                  </div>
+                  <div class="field">
+                    <label class="field-label" for="appt-time">Preferred time <span class="text-alert" aria-hidden="true">*</span></label>
+                    <select class="field-select" id="appt-time" name="time" required aria-describedby="appt-time-error">
+                      <option value="">Choose a time</option>
+                      <option>Morning (8:00–12:00)</option>
+                      <option>Afternoon (12:00–16:00)</option>
+                      <option>Late afternoon (16:00–18:00)</option>
+                      <option>No preference</option>
+                    </select>
+                    <span class="field-error" id="appt-time-error" data-error-for="time"></span>
+                  </div>
+                  <div class="field field-full">
+                    <div class="flex items-center justify-between gap-3">
+                      <label class="field-label" for="appt-message">Anything we should know? <span class="font-normal text-ink-faint">(optional)</span></label>
+                      <span class="text-xs text-ink-faint" data-message-count>0 / 500</span>
+                    </div>
+                    <textarea class="field-textarea" id="appt-message" name="message" maxlength="500" rows="4" placeholder="For example: accessibility needs, interpretation, or a preferred day. Please do not include sensitive medical details." aria-describedby="appt-message-error"></textarea>
+                    <span class="field-error" id="appt-message-error" data-error-for="message"></span>
+                  </div>
+                  <div class="field field-full">
+                    <label class="checkbox-field">
+                      <input type="checkbox" name="consent" required aria-describedby="appt-consent-error">
+                      <span>I understand this is a fictional demonstration, that no real appointment will be booked, and that my details are not sent or stored.</span>
+                    </label>
+                    <span class="field-error" id="appt-consent-error" data-error-for="consent"></span>
+                  </div>
+                  <div class="field-full">
+                    <div class="form-alert" data-form-alert role="alert"></div>
+                    <button class="btn btn-primary btn-block" type="submit">Send demo request <i data-lucide="arrow-right" aria-hidden="true"></i></button>
+                    <p class="note mt-3 text-center">For urgent symptoms, do not use this form. Call <a class="font-bold text-navy-900 underline underline-offset-2" href="tel:+15550149111">(555) 014-9111</a> or 911.</p>
+                  </div>
+                </div>
+              </form>
+            </div>
+
+            <div class="form-success" data-appointment-success hidden></div>
+          </div>
+
+          <aside class="lg:col-span-4" data-appointment-sidebar aria-label="Appointment help and information">
+            <div class="space-y-5">
+              <div class="rounded-card border border-line bg-sand-50 p-6">
+                <h2 class="display-4">What happens next?</h2>
+                <ol class="mt-4 space-y-4 text-sm leading-relaxed text-ink-soft">
+                  <li class="flex items-start gap-3"><span class="flex h-6 w-6 shrink-0 items-center justify-center rounded-full bg-navy-900 text-[11px] font-bold text-white">1</span><span>The clinic reviews the request against sample availability.</span></li>
+                  <li class="flex items-start gap-3"><span class="flex h-6 w-6 shrink-0 items-center justify-center rounded-full bg-navy-900 text-[11px] font-bold text-white">2</span><span>You receive a confirmation with the date, time and location.</span></li>
+                  <li class="flex items-start gap-3"><span class="flex h-6 w-6 shrink-0 items-center justify-center rounded-full bg-navy-900 text-[11px] font-bold text-white">3</span><span>You are told what to bring and how to prepare.</span></li>
+                </ol>
+                <p class="mt-4 border-t border-line pt-4 text-xs leading-relaxed text-ink-faint">In this demo, none of these steps actually happen. You will see a sample summary instead.</p>
+              </div>
+
+              <div class="rounded-card border border-line p-6">
+                <h2 class="display-4">Before you request</h2>
+                <ul class="check-list mt-4">
+                  <li><i data-lucide="clipboard-list" aria-hidden="true"></i><span>A list of current medicines and allergies</span></li>
+                  <li><i data-lucide="file-text" aria-hidden="true"></i><span>Any referral letter or recent results</span></li>
+                  <li><i data-lucide="languages" aria-hidden="true"></i><span>Whether you need an interpreter</span></li>
+                  <li><i data-lucide="accessibility" aria-hidden="true"></i><span>Any mobility or accessibility needs</span></li>
+                </ul>
+                <a class="text-link mt-4" href="patient-information.html">Prepare for your visit <i data-lucide="arrow-right" class="h-4 w-4" aria-hidden="true"></i></a>
+              </div>
+
+              <div class="rounded-card border border-alert/25 bg-alert/5 p-6">
+                <h2 class="flex items-center gap-2 font-display text-xl font-semibold text-navy-900"><i data-lucide="phone-call" class="h-5 w-5 text-alert" aria-hidden="true"></i>Urgent help</h2>
+                <p class="mt-2 text-sm leading-relaxed text-ink-soft">Do not use this form for emergencies. Call <a class="font-bold text-navy-900 underline underline-offset-2" href="tel:+15550149111">(555) 014-9111</a> for urgent care, or 911 for a life-threatening emergency.</p>
+              </div>
+
+              <div class="rounded-card border border-sky-200 bg-sky-100/70 p-6 text-[13px] leading-relaxed text-ink-soft">
+                <p class="flex items-center gap-2 font-bold text-navy-900"><i data-lucide="lock" class="h-4 w-4 text-teal-700" aria-hidden="true"></i>Your privacy</p>
+                <p class="mt-2">This demonstration does not send or store form data. In a real service, patient information would be handled under strict privacy and security rules. Read our <a class="font-semibold underline underline-offset-2" href="privacy-policy.html">privacy policy</a>.</p>
+              </div>
+            </div>
+          </aside>
+        </div>
+
+        <div class="mt-10 grid gap-5 border-t border-line pt-8 md:grid-cols-3">
+          <div class="flex items-start gap-3">
+            <i data-lucide="clock" class="mt-0.5 h-5 w-5 shrink-0 text-teal-600" aria-hidden="true"></i>
+            <p class="text-sm leading-relaxed text-ink-soft"><strong class="text-navy-900">Sample clinic hours:</strong> Monday to Friday, 8:00–18:00; Saturday mornings for selected clinics.</p>
+          </div>
+          <div class="flex items-start gap-3">
+            <i data-lucide="map-pin" class="mt-0.5 h-5 w-5 shrink-0 text-teal-600" aria-hidden="true"></i>
+            <p class="text-sm leading-relaxed text-ink-soft"><strong class="text-navy-900">Location:</strong> 1200 Willowbrook Parkway, Northbridge, CA 94100. Main entrance and visitor parking.</p>
+          </div>
+          <div class="flex items-start gap-3">
+            <i data-lucide="message-circle" class="mt-0.5 h-5 w-5 shrink-0 text-teal-600" aria-hidden="true"></i>
+            <p class="text-sm leading-relaxed text-ink-soft"><strong class="text-navy-900">Need help?</strong> Call <a class="font-semibold underline underline-offset-2" href="tel:+15550142200">(555) 014-2200</a> or visit the <a class="font-semibold underline underline-offset-2" href="faq.html">FAQ</a>.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <div id="site-footer"></div>
+</body>
+</html>
